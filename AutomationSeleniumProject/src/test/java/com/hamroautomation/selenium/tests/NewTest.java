@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.hamroautomation.selenium.config.Drivers;
  
 public class NewTest {
  
@@ -22,7 +24,7 @@ public class NewTest {
    
     //For Mac
    //System.setProperty("webdriver.gecko.driver", "/Users/KapilLimbu/Documents/Basic Java Tutorial/Selenium/drivers/firefox/geckodriver");
-   System.setProperty("webdriver.chrome.driver", "/Users/KapilLimbu/Documents/Basic Java Tutorial/Selenium/drivers/chrome/chromedriver");
+   //System.setProperty("webdriver.chrome.driver", "/Users/KAPIL/Documents/SeleniumTestDriver/chrome/chromedriver");
 
    
    //For Winddows
@@ -30,7 +32,7 @@ public class NewTest {
 
    
    //driver = new FirefoxDriver();
-   driver = new ChromeDriver();
+   driver = Drivers.setChromeDriver();
    
   }
  
