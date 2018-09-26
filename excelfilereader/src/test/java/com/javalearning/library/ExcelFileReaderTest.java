@@ -13,11 +13,9 @@ public class ExcelFileReaderTest {
     public void TestFileReaderParse() {
         ExcelFileReader fileReader = new ExcelFileReader();
 
-        ClassLoader classLoader = getClass().getClassLoader();
-        String excelFilePath = new File(classLoader.getResource("customer.xlsx").getFile()).getPath();
-
-        List<Customer> customerList = fileReader.parse(excelFilePath, "customer", Customer.class);
-        List<Address> addressList = fileReader.parse(excelFilePath, "address", Address.class);
+        String fileName = "customer.xlsx";
+        List<Customer> customerList = fileReader.getObjectListFor(fileName, "customer", Customer.class);
+        List<Address> addressList = fileReader.getObjectListFor(fileName, "address", Address.class);
 
 
         Assert.assertTrue(customerList.size() > 1);

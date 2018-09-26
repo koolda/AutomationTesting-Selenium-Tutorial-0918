@@ -23,7 +23,9 @@ public class ExcelFileReader {
      * @param clazz: target class type into which we are mapping data from excel file.
      * @return list of T type objects
      * */
-    public <T> List<T> parse(String filePath, String sheetName, Class<T> clazz){
+    public <T> List<T> getObjectListFor(String fileName, String sheetName, Class<T> clazz){
+        ClassLoader classLoader = getClass().getClassLoader();
+        String filePath = new File(classLoader.getResource(fileName).getFile()).getPath();
         Gson gson = new Gson();
         JsonObject jsonObject = getExcelDataAsJsonObject(new File(filePath), sheetName);
         logger.info("Now converting json object into "+clazz.getSimpleName()+" object...");
