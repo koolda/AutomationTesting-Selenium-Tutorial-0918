@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-class ExcelFileReader {
+public class ExcelFileReader {
     private Logger logger = LogManager.getLogger(ExcelFileReader.class);
     private DataFormatter dataFormatter = new DataFormatter();
 
@@ -23,7 +23,7 @@ class ExcelFileReader {
      * @param clazz: target class type into which we are mapping data from excel file.
      * @return list of T type objects
      * */
-    <T> List<T> parse(String filePath, String sheetName, Class<T> clazz){
+    public <T> List<T> parse(String filePath, String sheetName, Class<T> clazz){
         Gson gson = new Gson();
         JsonObject jsonObject = getExcelDataAsJsonObject(new File(filePath), sheetName);
         logger.info("Now converting json object into "+clazz.getSimpleName()+" object...");
