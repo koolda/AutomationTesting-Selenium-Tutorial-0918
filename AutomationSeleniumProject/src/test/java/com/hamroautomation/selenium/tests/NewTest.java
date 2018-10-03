@@ -32,7 +32,7 @@ public class NewTest {
 
    
    //driver = new FirefoxDriver();
-   driver = Drivers.setChromeDriver();
+   driver = Drivers.getChromeDriver();
    
   }
  

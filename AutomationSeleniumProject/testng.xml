@@ -3,7 +3,9 @@
 <suite name="Suite" parallel="false">
   <test name="Test">
     <classes>
-      <class name="com.hamroautomation.selenium.tests.NewTest"/>
+      <!-- class name="com.hamroautomation.selenium.tests.LoginDataTestCase"/ -->
+       <class name="com.hamroautomation.selenium.tests.NewTest"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

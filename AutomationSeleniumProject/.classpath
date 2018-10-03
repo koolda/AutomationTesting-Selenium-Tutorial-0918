@@ -25,5 +25,7 @@
 	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="libraries/excel-file-reader.jar"/>
+	<classpathentry kind="lib" path="/Users/KAPIL/Documents/ToolsQA/selenium-java-3.14.0/commons-io-2.6.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
